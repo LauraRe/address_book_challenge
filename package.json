@@ -4,5 +4,11 @@
   "main": "index.js",
   "repository": "https://github.com/PilarWashburn/address_book_challenge.git",
   "author": "pilar_washburn <pw325555@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "cucumber": "^5.1.0",
+    "puppeteer": "^1.11.0",
+    "superstatic": "^6.0.4"
+  }
 }
