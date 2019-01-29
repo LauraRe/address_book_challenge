@@ -12,8 +12,8 @@ Then("I should see {string}", async function(content) {
   return await this.pageHasTextContent(content)
 });
 
-When('I click {string}', async function(string) {
-return await this.clickOnAddContactBtn()
+When('I click {string}', async function(btnName) {
+return await this.clickOnAddContactBtn(btnName)
 });
 
 Then('I fill in {string} with {string}', async function(field, content) {
