@@ -22,7 +22,12 @@ class AddressBookWorld {
     const actualContent = pageContent.match(expectedContent)[0]
 
     expect(actualContent).to.be.eq(expectedContent)
-  }
+    }
+    async clickOnAddContactBtn() {
+    const btnSelector = '.add-contact'
+    await this.page.waitForSelector(btnSelector)
+    await this.page.click(btnSelector)
+    }
 }
 
 setWorldConstructor(AddressBookWorld)
