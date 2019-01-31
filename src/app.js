@@ -1,3 +1,5 @@
+import { tokensToRegExp } from "path-to-regexp";
+
 const storage = window.localStorage
 
 const renderContacts = () => {
@@ -24,6 +26,12 @@ const renderContacts = () => {
             </div>
         `
             ul.appendChild(li)
+            let button = document.createElement('button');
+            button.classList += "delete-contact";
+            button.innerHTML = 'X';
+            li.appendChild(button)
+            
+            ul.appendChild(li)
         })
         div.appendChild(ul)
     } else {
@@ -31,23 +39,23 @@ const renderContacts = () => {
     }
 }
 
-let delete_button = document.querySelector('.contact-list')
+    let delete_button = document.querySelector('.contact-list')
 
-delete_button.addEventListener('click',event => {
-    let id = event.target.parentNode.id
-    let contacts = JSON.parse(storage.getItem('contacts')) || []
-    console.log(contacts)
-    contacts.forEach(contact => {
-contact.id == id ? contacts.splice(contacts.indexOf(contact),1)  : false
+    delete_button.addEventListener('click',event => {
+        let id = event.target.parentNode.id
+        let contacts = JSON.parse(storage.getItem('contacts') || []
+        console.log(contacts)
+        contacts.forEach(contact => {
 
-})
-// event.target.parentNode.remove()
-console.log(contacts)
+            contact.id == id ? contacts.splice(contacts.indexOf(contact),1) : false
+        })
 
-storage.setItem('contacts', JSON.stringify(contacts))
-renderContacts()
+        console.log(contacts)
 
-}) 
+        storage.setItem('contacts', JSON.stringify(contacts))
+        renderContacts()
+        )
+    })
 
 document.addEventListener('DOMContentLoaded', () => {
     renderContacts()
