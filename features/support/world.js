@@ -30,10 +30,10 @@ class AddressBookWorld {
     }
 
     async fillFormField(field, content) {
-        const inputSelector = `#contact-${field}`
-        await this.page.waitForSelector(inputSelector)
-        this.inputElement = await this.page.$(inputSelector)
-        await this.inputElement.type(content)
+    const inputSelector = `#contact-${field}`
+    await this.page.waitForSelector(inputSelector)
+    this.inputElement = await this.page.$(inputSelector)
+    await this.inputElement.type(content)
     }
     
     async checkContactStorageCount(expectedCount) {
@@ -57,7 +57,7 @@ class AddressBookWorld {
                 break
             case 'save contact':
                 return '.save-contact'
-                break
+                break   
             default:
                 throw `${btnName} button is not defined`
                 break

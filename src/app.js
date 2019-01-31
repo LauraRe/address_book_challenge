@@ -11,16 +11,16 @@ const renderContacts = () => {
             let li = document.createElement('li')
             li.innerHTML = `
             <div class="card">
-                <div class="image">
-                    <img src="https://ca-address-book.herokuapp.com/images/pine.jpg" />
-                </div>
                 <div class="content">
                     <h1>${ contact.name}</h1>
                     <h2>${ contact.company}</h2>
                     <p>${ contact.notes}</p>
                     ${ contact.email} |
+                    <button class="delete-contact">Delete Contact</button>
+                    <button class="edit-contact">Edit Contact</button>
                     <a href="https://www.twitter.com/${ contact.twitter}">@${contact.twitter}</a>
-                </div>
+
+                    </div>
             </div>
         `
             ul.appendChild(li)
