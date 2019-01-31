@@ -28,18 +28,3 @@ Then('I should not see {string}', async function(content) {
   return await this.pageDoesNotHaveTextContent(content)
 })
 
-When('I click {string}', async function(btnName) {
-  return await this.clickOnDeleteContactBtn(btnName)
-});
-
-Then('I should not have {int} contact in my address book', async function(expectedCount) {
-  return await this.checkContactStorageCount(expectedCount)
-});
-
-When('I click {string}', async function(btnName) {
-  return await this.clickOnEditContactBtn(btnName)
-});
-  
-Then('I should have {int} an updated contact in my address book', async function(expectedCount) {
-  return await this.checkContactStorageCount(expectedCount)
-});
