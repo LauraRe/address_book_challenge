@@ -20,33 +20,35 @@
 <body>
   <h1>Contacts</h1>
   <button class="add-contact">Add Contact</button>
-  <form class="new-contact-form w-full max-w-md" action="#">
-    <div class="flex flex-wrap -mx-3 mb-6">
-      <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-        <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="name">Name</label>
-        <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-grey"
-          id="contact-name" name="name" type="text" placeholder="name">
-        <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="email">Email</label>
-        <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-          id="contact-email" name="email" type="email" placeholder="email">
-        <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="phone">Phone</label>
-        <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-          id="contact-phone" name="phone" type="text" placeholder="phone">
-        <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="company">Company</label>
-        <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-          id="contact-company" name="company" type="text" placeholder="company">
-        <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="notes">Notes</label>
-        <textarea class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-          id="contact-notes" name="notes" type="text" placeholder="notes"></textarea>
-        <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="twitter">Twitter</label>
-        <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-          id="contact-twitter" name="twitter" type="text" placeholder="twitter">
-        <input class="save-contact" type="submit" value="Save contact">
+  <div class="static flex mb-4">
+    <form class="new-contact-form w-full max-w-md" action="#">
+      <div class="flex flex-wrap -mx-3 mb-6">
+        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+          <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="name">Name</label>
+          <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-grey"
+            id="contact-name" name="name" type="text" placeholder="name">
+          <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="email">Email</label>
+          <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+            id="contact-email" name="email" type="email" placeholder="email">
+          <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="phone">Phone</label>
+          <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+            id="contact-phone" name="phone" type="text" placeholder="phone">
+          <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="company">Company</label>
+          <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+            id="contact-company" name="company" type="text" placeholder="company">
+          <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="notes">Notes</label>
+          <textarea class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+            id="contact-notes" name="notes" type="text" placeholder="notes"></textarea>
+          <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="twitter">Twitter</label>
+          <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+            id="contact-twitter" name="twitter" type="text" placeholder="twitter">
+          <input class="save-contact" type="submit" value="Save contact">
+        </div>
       </div>
+    </form>
+    <div class="contact-list">
+      <p>You have no contacts in your address book</p>
     </div>
-  </form>
-  <div class="contact-list">
-    <p>You have no contacts in your address book</p>
   </div>
   <script src="./dist/bundle.js"></script>
 </body>
