@@ -27,3 +27,4 @@ Then('I should have {int} contact in my address book', async function(expectedCo
 Then('I should not see {string}', async function(content) {
   return await this.pageDoesNotHaveTextContent(content)
 })
+
