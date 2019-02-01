@@ -18,8 +18,7 @@
 </head>
 
 <body>
-  <h1>Contacts</h1>
-  <button class="add-contact">Add Contact</button>
+  <h1 class="add-contact">Add Contact</h1>
   <div class="static flex mb-4">
     <form class="new-contact-form w-full max-w-md" action="#">
       <div class="flex flex-wrap -mx-3 mb-6">
@@ -46,9 +45,29 @@
         </div>
       </div>
     </form>
-    <div class="contact-list">
-      <p>You have no contacts in your address book</p>
+    <div class="object-right-top">
+      <h1>Contacts =></h1>
     </div>
+    <div class="contact-list ml-20 w-full w-1/3 max-w-sm flex mt-18 pt-12 ml-10">
+      <ul>
+        <card>
+          <div class="bg-grey-lighter mx-auto max-w-sm shadow-lg rounded-lg overflow-hidden">
+          <div class="card sm:flex sm:items-chenter px-6 py-4 text-black font-thin hover:background-color">
+            <img class="image block h-16 sm:h-24 rounded-full mx-auto mb-4 sm:mb-0 sm:mr-4 sm:ml-0" src="https://pngimage.net/wp-content/uploads/2018/06/login-icon-vector-png-5.png" alt="Portrait_Placeholder">
+            <div id="${contact.id}" class="content text-center sm:text-left sm:flex-grow">
+              <h1>${ contact.name}</h1>
+              <h2>${ contact.company}</h2>
+              <p>${ contact.notes}</p>
+              ${ contact.email}
+              <button class="delete-contact">Delete Contact</button>
+              <a href="https://www.twitter.com/${ contact.twitter}">@${contact.twitter}</a>
+            </div>
+          </div>
+        </card>
+      </ul>
+    </div>
+  </div>
+  </div>
   </div>
   <script src="./dist/bundle.js"></script>
 </body>

@@ -14,12 +14,12 @@ const renderContacts = () => {
             li.innerHTML = `
             <div class="card">
                 <div id="${contact.id}" class="content">
+                    <img class="image block h-16 sm:h-24 rounded-full mx-auto mb-4 sm:mb-0 sm:mr-4 sm:ml-0" src="https://pngimage.net/wp-content/uploads/2018/06/login-icon-vector-png-5.png" alt="Portrait_Placeholder">
                     <h1>${ contact.name}</h1>
                     <h2>${ contact.company}</h2>
                     <p>${ contact.notes}</p>
                     ${ contact.email}
                     <button class="delete-contact">Delete Contact</button>
-                    <button class="edit-contact">Edit Contact</button>
                     <a href="https://www.twitter.com/${ contact.twitter}">@${contact.twitter}</a>
                 </div>
             </div>
